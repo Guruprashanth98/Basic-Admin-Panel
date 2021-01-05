@@ -8,7 +8,7 @@ $.ajax({
         $('#overlay').css('display','none')
     },
     success: function(response){
-        response = response.splice(0,5)
+        response = response
         $("tbody").empty()
         response.map(item =>  $('tbody').append(createRow(item)) )
         $("form").submit((e) =>{
